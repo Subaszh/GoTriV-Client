@@ -7,7 +7,7 @@ import { ConfirmationPage } from "./pages/confirmation/confirmation.page";
 const Routes: React.SFC = () => (
   <Switch>
     <Route exact path="/" component={LandingPage} />
-    <Route path="/hotel-details" component={HotelDetailPage} />
+    <Route path="/hotel-details/:hotelId" component={HotelDetailPage} />
     <Route path="/confirmation" component={ConfirmationPage} />
     <Route component={() => <div>Not Found</div>} />
   </Switch>

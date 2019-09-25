@@ -1,0 +1,4 @@
+export const RECEIVED_HOTELS = 'RECEIVED_HOTELS';
+export const REQUEST_HOTELS = 'REQUEST_HOTELS';
+export const SELECT_HOTEL = 'SELECT_HOTEL';
+export const ADD_HOTEL = 'ADD_HOTEL';

@@ -1,21 +1,16 @@
 import React from 'react';
-import { GtHeader } from './components/gt-header/gt-header.component';
 import './App.css';
 import Routes from './routes';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
-import {  } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { GtHeader } from './components/gt-header/gt-header.component';
 
 
 const App: React.FC = () => {
   return (
     <div>
       <Router>
-        <GtHeader>
-        </GtHeader>
-        <div className="route-container"> 
-          <Link to="/">Home</Link>
-          <Link to="/hotel-details">Hotel Details</Link>
-          <Link to="/confirmation">Confirmation</Link>
+        <GtHeader></GtHeader>
+          <div className="route-container">
           <Routes />
         </div>
       </Router>
