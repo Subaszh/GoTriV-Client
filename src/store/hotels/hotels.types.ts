@@ -7,17 +7,24 @@ export interface Hotel {
   city: string,
   country: string,
   price_category: string,
-  stars: number
+  rating: number,
+  distance_from_venue: number
 }
 
 export interface Hotels {
   selected: string,
   list: Hotel[],
   visibleList: Hotel[],
-  filters: HotelsFilters
+  filters: HotelsFilters,
+  sort: SortFilters
 }
 
 export interface HotelsFilters {
   amenities: string[],
   price_category: string[]
+}
+
+export interface SortFilters {
+  key: string,
+  order: string
 }

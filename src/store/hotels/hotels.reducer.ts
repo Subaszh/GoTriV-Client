@@ -1,7 +1,19 @@
-import { RECEIVED_HOTELS, SELECT_HOTEL, ADD_HOTEL, SET_FILTERS, FILTER_AND_SORT_HOTELS } from '../../constants/action-types.constants';
-import { Hotels, Hotel, HotelsFilters } from './hotels.types';
+import { RECEIVED_HOTELS, SELECT_HOTEL, ADD_HOTEL, SET_FILTERS, FILTER_AND_SORT_HOTELS, SORT_HOTELS } from '../../constants/action-types.constants';
+import { Hotels, Hotel, SortFilters } from './hotels.types';
 
-const initialState: Hotels = {selected: '', list: [], visibleList: [], filters: { amenities: [], price_category: []}};
+const initialState: Hotels = {
+  selected: '',
+  list: [],
+  visibleList: [],
+  filters: {
+    amenities: [],
+    price_category: []
+  },
+  sort: {
+    key: 'rating',
+    order: 'desc'
+  }
+};
 
 export const getSelectedHotel = (hotels: Hotels) => {
   return hotels.list.find(hotel =>  hotel.id === hotels.selected);
@@ -37,7 +49,20 @@ const filterHotels = (hotels: Hotel[], filters: any): Hotel[] => {
 }
 
 const setVisibleHotelList = (state: Hotels) => {
-  return {...state, visibleList: filterHotels(state.list, state.filters)}
+  return {...state, visibleList: sortHotelList(filterHotels(state.list, state.filters), state.sort)};
+};
+
+const sortHotelList = (hotels: Hotel[], sort: SortFilters) => {
+  const _hotels = [...hotels];
+  return _hotels.sort((a: any, b: any): number => {
+    if (a[sort.key] < b[sort.key]) {
+      return (sort.order === 'asc') ? -1 : 1
+    }
+    if (a[sort.key] > b[sort.key]) {
+      return (sort.order === 'asc') ? 1 : -1
+    }
+    return 0;
+  });
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -52,6 +77,14 @@ const reducer = (state = initialState, action: any) => {
       return {...state, filters: {...state.filters, ...action.filterChange}};
     case FILTER_AND_SORT_HOTELS:
       return setVisibleHotelList(state);
+    case SORT_HOTELS: {
+      const newSort = { key: action.key, order: action.order }; 
+      return {
+        ...state,
+        sort: newSort,
+        visibleList: sortHotelList(state.visibleList, newSort)
+      }
+    }
     default:
       return state;
   }

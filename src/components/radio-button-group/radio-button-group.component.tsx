@@ -22,7 +22,7 @@ class RadioButtonGroupComponent extends Component<RadioButtonGroupComponentProps
   render() {
     return this.props.options.map(option => {
       return (
-        <div className="radio-button-group-holder">
+        <div className="radio-button-group-holder" key={'rad-grp-' + option.key}>
           <input
           className="radio-group-input"
           type="radio"

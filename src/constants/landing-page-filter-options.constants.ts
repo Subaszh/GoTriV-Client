@@ -47,3 +47,26 @@ export const PRICE_CATEGORY_FILTER = [
     label: 'High'
   }
 ]
+
+export const LANDING_SORT_FILTER = [
+  {
+    label: "Rating - High to Low",
+    key: "rating",
+    order: 'desc'
+  },
+  {
+    label: "Rating - Low to High",
+    key: "rating",
+    order: 'asc'
+  },
+  {
+    label: "Distance - Low to High",
+    key: "distance_from_venue",
+    order: 'asc'
+  },
+  {
+    label: "Distance - High to Low",
+    key: "distance_from_venue",
+    order: 'desc'
+  }
+]
