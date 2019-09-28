@@ -7,14 +7,12 @@ import { GtHeader } from './components/gt-header/gt-header.component';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Router>
-        <GtHeader></GtHeader>
-          <div className="route-container">
-          <Routes />
-        </div>
-      </Router>
-    </div>
+    <Router>
+      <GtHeader></GtHeader>
+        <div className="route-container">
+        <Routes />
+      </div>
+    </Router>
   );
 }
 

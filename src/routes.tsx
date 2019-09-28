@@ -1,4 +1,4 @@
-import { Route, Switch} from "react-router-dom";
+import { Route, Switch, Redirect} from "react-router-dom";
 import React from 'react';
 import { LandingPage } from './pages/landing/landing.page';
 import { HotelDetailPage } from './pages/hotel-detail/hotel-detail.page';
@@ -9,7 +9,7 @@ const Routes: React.SFC = () => (
     <Route exact path="/" component={LandingPage} />
     <Route path="/hotel-details/:hotelId" component={HotelDetailPage} />
     <Route path="/confirmation" component={ConfirmationPage} />
-    <Route component={() => <div>Not Found</div>} />
+    <Redirect from="*" to="/" />
   </Switch>
 )
 

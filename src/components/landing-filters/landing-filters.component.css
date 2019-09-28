@@ -1,0 +1,22 @@
+.filters-main-h {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 54px;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.landing-filter {
+  padding: 0px 10px 12px 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.landing-filter-h {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+}

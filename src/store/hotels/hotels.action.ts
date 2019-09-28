@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { REQUEST_HOTELS, RECEIVED_HOTELS, SELECT_HOTEL, ADD_HOTEL } from '../../constants/action-types.constants';
+import { REQUEST_HOTELS, RECEIVED_HOTELS, SELECT_HOTEL, ADD_HOTEL, SET_FILTERS, FILTER_AND_SORT_HOTELS } from '../../constants/action-types.constants';
 import { Hotel } from './hotels.types';
 
 const getHotels =  () => {
@@ -15,9 +15,16 @@ export const fetchHotels = () => (dispatch: any, getState: any) => {
     dispatch({type: REQUEST_HOTELS, isLoading: true});
     getHotels().then((response) => {
       dispatch({type: RECEIVED_HOTELS, hotels: response.data});
+      dispatch({type: FILTER_AND_SORT_HOTELS});
     });
   }
 }
+
+
+export const filterHotels = (filterType: string, value: string[]) => (dispatch: any, getState: any) => {
+  dispatch({type: SET_FILTERS, filterChange: { [filterType]: value }});
+  dispatch({type: FILTER_AND_SORT_HOTELS});
+} 
 
 export const fetchHotelById = (hotelId: string) => (dispatch: any, getState: any) => {
   const state = getState();
@@ -31,6 +38,4 @@ export const fetchHotelById = (hotelId: string) => (dispatch: any, getState: any
       });
     }
   }
-
-  getHotelById(hotelId)
 }
