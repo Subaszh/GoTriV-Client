@@ -18,7 +18,7 @@ class HotelCard extends Component<HotelCardProps> {
     return (
       <div className="landing-hotel-card">
         <div className="hotel-image-container">
-          <img className="hotel-image" src={hotel.images[0]} alt=""/>
+          <img className="hotel-image" src={hotel.images[0] ||  ''} alt=""/>
         </div>
         <div className="hotel-detail-container">
           <div className="left">

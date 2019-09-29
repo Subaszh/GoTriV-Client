@@ -13,11 +13,20 @@ html, body, #root {
   height: calc(100% - 56px);
 }
 
+.route-h {
+  max-width: 1366px;
+  min-width: 1024px;
+  margin: 0 auto;
+  background: white;
+  height: 100%;
+}
+
 .action-button {
   background: #2874f0;
   height: 38px;
   color: white;
   font-weight: 600;
+  cursor: pointer;
   font-size: 14px;
   padding: 6px 18px;
   border-radius: 3.3px;

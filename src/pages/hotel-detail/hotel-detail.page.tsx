@@ -36,15 +36,17 @@ class HotelDetailPageComponent extends Component<any> {
   }
 
   onRoomSelect(room: Room) {
-    this.storage.set(CONFIRM_HOTEL_KEY, this.props.hotel);
-    this.storage.set(CONFIRM_ROOM_KEY, room);
-    this.props.history.push(`/confirmation/${this.props.hotel.id}/${room.id}`);
+    if(window.confirm('Are you want to confirm ?')) {
+      this.storage.set(CONFIRM_HOTEL_KEY, this.props.hotel);
+      this.storage.set(CONFIRM_ROOM_KEY, room);
+      this.props.history.push(`/confirmation/${this.props.hotel.id}/${room.id}`);
+    }
   }
 
   render() {
     const {hotel, rooms} = this.props;
     return (
-      <section className="hotel-details-c">
+      <section className="hotel-details-c route-h">
         <div className="left-c">
           <div className="img-p-c">
             {(hotel.images || []).map((image: string, index: number) => 

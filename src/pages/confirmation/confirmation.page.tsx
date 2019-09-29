@@ -70,7 +70,7 @@ export class ConfirmationPageComponent extends Component<any> {
       return this.invalidBookingConfirmation();
     } else {
       return (
-        <div className="confirmation-page-c">
+        <div className="confirmation-page-c route-h">
           <div className="page-h">
             <div className="card-holder">
               <div className="eq-c hotel-detail">

@@ -1,13 +1,14 @@
 import axios from 'axios';
 import { RECEIVED_ROOMS, SELECT_ROOM, REQUEST_ROOMS, ADD_ROOM } from '../../constants/action-types.constants';
 import { Room } from './rooms.type';
+import { HOST_URL } from '../../constants/environment.constants';
 
 const getRoomsByHotelId = (hotelId: string) => {
-  return axios.get(`http://localhost:3000/rooms?hotel_id=${hotelId}`);
+  return axios.get(`${HOST_URL}/rooms?hotel_id=${hotelId}`);
 }
 
 const getRoomById = (roomId: string) => {
-  return axios.get(`http://localhost:3000/rooms/${roomId}`);
+  return axios.get(`${HOST_URL}/rooms/${roomId}`);
 }
 
 export const fetchRoomsByHotelId = (hotelId: string) => (dispatch: any, getState: any) => {

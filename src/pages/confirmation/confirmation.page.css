@@ -1,13 +1,9 @@
-.confirmation-page-c {
-  margin: 0px auto;
-  min-width: 1024px;
-  max-width: 1366px;
-  height: 100%;
-  
-}
-
 .confirmation-page-c .page-h {
   padding: 30px;
+}
+
+.confirmation-page-c {
+  background: #f1f3f6;
 }
 
 .invalid-message-c {

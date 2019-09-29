@@ -1,0 +1,52 @@
+.hotel-config-c  {
+  padding: 20px;
+}
+
+.hotel-config-hd {
+  font-size: 24px;
+}
+
+.hotel-form {
+  width: 80%;
+  margin: 20px 10%;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  width: 20%;
+  margin: 20px 0;
+  font-weight: 600;
+  color: #555;
+  display: inline-block;
+}
+
+.form-group .form-control {
+  width: 240px;
+  height: 32px;
+  border-radius: 2px;
+  border: 1.5px solid #c7c7c7;
+  box-shadow: none;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  padding-left: 3px;
+  font-weight: 600;
+}
+
+.form-group select.form-control  {
+  height: 38px;
+  width: 246px;
+}
+
+.form-group .form-control:focus, .form-group .form-control:focus:active {
+  border: 2px solid #2874f0;
+  outline: 0px;
+}
+
+.danger {
+  background: red;
+  margin: 0 10px ;
+}

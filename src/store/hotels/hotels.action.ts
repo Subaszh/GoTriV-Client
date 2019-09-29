@@ -1,13 +1,26 @@
 import axios from 'axios';
 import { REQUEST_HOTELS, RECEIVED_HOTELS, SELECT_HOTEL, ADD_HOTEL, SET_FILTERS, FILTER_AND_SORT_HOTELS, SORT_HOTELS } from '../../constants/action-types.constants';
 import { Hotel } from './hotels.types';
+import { HOST_URL } from '../../constants/environment.constants';
+
+export const saveHotel = (hotel: any): Promise<any> => {
+  if (hotel.id) {
+    return axios.patch(`${HOST_URL}/hotels/${hotel.id}`, hotel)
+  } else {
+    return axios.post(`${HOST_URL}/hotels`, hotel)
+  }
+}
+
+export const deleteHotel = (hotelId: string): Promise<any> => {
+  return axios.delete(`${HOST_URL}/hotels/${hotelId}`)
+}
 
 const getHotels =  () => {
-  return axios.get('http://localhost:3000/hotels')
+  return axios.get(`${HOST_URL}/hotels`)
 }
 
 const getHotelById = (hotelId: string) => {
-  return axios.get(`http://localhost:3000/hotels/${hotelId}`)
+  return axios.get(`${HOST_URL}/hotels/${hotelId}`)
 }
 
 export const fetchHotels = () => (dispatch: any, getState: any) => {

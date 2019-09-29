@@ -1,8 +1,4 @@
 .hotel-details-c {
-  max-width: 1366px;
-  min-width: 1024px;
-  margin: 0 auto;
-  background: white;
   height: 100%;
   display: flex;
   padding: 16px;
