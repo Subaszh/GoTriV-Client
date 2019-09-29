@@ -6,3 +6,8 @@ export interface Room {
   hotel_id: string,
   max_occupancy: number
 }
+
+export interface Rooms {
+  list: Room[],
+  selected: string
+}

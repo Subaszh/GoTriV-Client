@@ -8,7 +8,7 @@ const Routes: React.SFC = () => (
   <Switch>
     <Route exact path="/" component={LandingPage} />
     <Route path="/hotel-details/:hotelId" component={HotelDetailPage} />
-    <Route path="/confirmation" component={ConfirmationPage} />
+    <Route path="/confirmation/:hotelId/:roomId" component={ConfirmationPage} />
     <Redirect from="*" to="/" />
   </Switch>
 )

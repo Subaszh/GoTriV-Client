@@ -18,7 +18,7 @@ class HotelCard extends Component<HotelCardProps> {
     return (
       <div className="landing-hotel-card">
         <div className="hotel-image-container">
-          <img className="hotel-image" src={hotel.images[0]} />
+          <img className="hotel-image" src={hotel.images[0]} alt=""/>
         </div>
         <div className="hotel-detail-container">
           <div className="left">
@@ -26,9 +26,7 @@ class HotelCard extends Component<HotelCardProps> {
             <div className="hotel-rating-container">
               <RatingComponent rating={hotel.rating}/>
               <div className="hotel-city-desc">{hotel.city}, {hotel.country}</div>
-              <div className="hotel-distance-c">
-                <span><span className="bold">{hotel.distance_from_venue}m</span> from the venue</span>
-              </div>
+
             </div>
             <div className="hotel-desc-c">{hotel.description}</div>
           </div>
@@ -39,6 +37,9 @@ class HotelCard extends Component<HotelCardProps> {
               </Link>
               </button>
             <div className="hotel-category-detail">Price Category: <span>{hotel.price_category}</span></div>
+            <div className="hotel-distance-c">
+              <span><span className="bold">{hotel.distance_from_venue}m</span> from the venue</span>
+            </div>
           </div>
         </div>
       </div>

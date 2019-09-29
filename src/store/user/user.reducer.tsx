@@ -1,7 +1,5 @@
-// import { combineReducers } from "redux";
-
 const initialState = {
-  username: 'Subash Chandran'
+  username: 'John Doe'
 } 
 
 export interface User {

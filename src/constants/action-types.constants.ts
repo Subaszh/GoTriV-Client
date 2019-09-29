@@ -9,3 +9,6 @@ export const RECEIVED_ROOMS = 'RECEIVED_ROOMS';
 export const REQUEST_ROOMS = 'REQUEST_ROOMS';
 export const SELECT_ROOM = 'SELECT_ROOM';
 export const ADD_ROOM = 'ADD_ROOM';
+
+export const CONFIRM_HOTEL_KEY = 'confirm-hotel';
+export const CONFIRM_ROOM_KEY = 'confirm-room';

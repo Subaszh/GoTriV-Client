@@ -1,0 +1,68 @@
+.confirmation-page-c {
+  margin: 0px auto;
+  min-width: 1024px;
+  max-width: 1366px;
+  height: 100%;
+  
+}
+
+.confirmation-page-c .page-h {
+  padding: 30px;
+}
+
+.invalid-message-c {
+  max-height: 180px;
+  border-radius: 2px;
+}
+
+.card-holder {
+  background: white;
+  border-radius: 2px;
+  display: flex;
+  width: 100%;
+}
+
+.eq-c {
+  position: relative;
+  padding: 12px 10px;
+  min-height: 160px;
+  flex-grow: 1;
+    flex-basis: 0;
+}
+
+.eq-c:not(:last-child) {
+  border-right: 1px solid #f0f0f0;
+}
+
+.eq-c .hotel-distance-c {
+  margin: 5px 0;
+}
+
+.room-d-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.room-detail .room-left-c {
+  position: absolute;
+  bottom: 5px;
+  float: none;
+  padding: 0;
+}
+
+.room-detail .room-price {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+
+.checkin-detail {
+  vertical-align: center;
+}
+
+.book-more {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 40px;
+}

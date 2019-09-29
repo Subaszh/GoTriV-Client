@@ -20,7 +20,6 @@ export const fetchHotels = () => (dispatch: any, getState: any) => {
   }
 }
 
-
 export const filterHotels = (filterType: string, value: string[]) => (dispatch: any, getState: any) => {
   dispatch({type: SET_FILTERS, filterChange: { [filterType]: value }});
   dispatch({type: FILTER_AND_SORT_HOTELS});

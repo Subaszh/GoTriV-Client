@@ -10,9 +10,12 @@ import { TagComponent } from '../../components/tag/tag.component';
 import { Room } from '../../store/rooms/rooms.type';
 import { RoomDetailsComponent } from '../../components/room-details/room-details.component';
 import { withRouter } from 'react-router';
+import StorageUtils from '../../utils/storage.utils';
+import { CONFIRM_HOTEL_KEY, CONFIRM_ROOM_KEY } from "../../constants/action-types.constants";
 
 class HotelDetailPageComponent extends Component<any> {
   public state = { activeImage: '' };
+  public storage = new StorageUtils();
   
   componentDidMount() {
     const hotelId = this.props && this.props.match && this.props.match.params && this.props.match.params.hotelId
@@ -33,7 +36,9 @@ class HotelDetailPageComponent extends Component<any> {
   }
 
   onRoomSelect(room: Room) {
-    this.props.history.push(`/confirmation/${this.props.hotel.id}/${room.id}}`);
+    this.storage.set(CONFIRM_HOTEL_KEY, this.props.hotel);
+    this.storage.set(CONFIRM_ROOM_KEY, room);
+    this.props.history.push(`/confirmation/${this.props.hotel.id}/${room.id}`);
   }
 
   render() {
@@ -70,7 +75,7 @@ class HotelDetailPageComponent extends Component<any> {
             <span>Distance: <span className="bold">{hotel.distance_from_venue}m</span> from the venue</span>
           </div>
           <div className="hotel-rooms-c">
-            {rooms.map((room: Room) => <RoomDetailsComponent key={`room-detail-${room.id}`} room={room}  onClick={this.onRoomSelect.bind(this)}/>)}
+            {(rooms || []).map((room: Room) => <RoomDetailsComponent key={`room-detail-${room.id}`} room={room}  onClick={this.onRoomSelect.bind(this)}/>)}
           </div>
           <div className="hotel-review-c">
             <div className="hotel-review-hd">Ratings & Reviews</div>
@@ -98,7 +103,7 @@ class HotelDetailPageComponent extends Component<any> {
 
 const mapStateToProps = ({ hotels, rooms }: ApplicationState) => ({
   hotel: getSelectedHotel(hotels) || {},
-  rooms
+  rooms: rooms.list
 });
 
 export const HotelDetailPage = withRouter<any, any>(connect(mapStateToProps)(HotelDetailPageComponent));
