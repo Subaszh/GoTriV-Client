@@ -13,14 +13,15 @@
 
 .form-group {
   width: 100%;
+  height: 60px;
 }
 
-.form-group label {
+.form-label {
   width: 20%;
   margin: 20px 0;
   font-weight: 600;
   color: #555;
-  display: inline-block;
+  float: left;
 }
 
 .form-group .form-control {
@@ -49,4 +50,16 @@
 .danger {
   background: red;
   margin: 0 10px ;
+}
+
+.error-c {
+  display: block;
+  font-size: 12px;
+  position: relative;
+  color: red;
+  right: 0px;
+}
+
+.form-input {
+  float: left;
 }

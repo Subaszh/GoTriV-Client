@@ -32,6 +32,10 @@ html, body, #root {
   border-radius: 3.3px;
 }
 
+.action-button:disabled {
+  opacity: 0.7;
+}
+
 .action-button:focus, .action-button:active {
   outline: 0;
 }

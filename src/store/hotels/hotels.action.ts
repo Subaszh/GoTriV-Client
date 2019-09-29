@@ -24,13 +24,11 @@ const getHotelById = (hotelId: string) => {
 }
 
 export const fetchHotels = () => (dispatch: any, getState: any) => {
-  if(getState().hotels.list.length === 0) {
-    dispatch({type: REQUEST_HOTELS, isLoading: true});
-    getHotels().then((response) => {
-      dispatch({type: RECEIVED_HOTELS, hotels: response.data});
-      dispatch({type: FILTER_AND_SORT_HOTELS});
-    });
-  }
+  dispatch({type: REQUEST_HOTELS, isLoading: true});
+  getHotels().then((response) => {
+    dispatch({type: RECEIVED_HOTELS, hotels: response.data});
+    dispatch({type: FILTER_AND_SORT_HOTELS});
+  });
 }
 
 export const filterHotels = (filterType: string, value: string[]) => (dispatch: any, getState: any) => {
