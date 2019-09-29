@@ -36,7 +36,7 @@ class HotelDetailPageComponent extends Component<any> {
   }
 
   onRoomSelect(room: Room) {
-    if(window.confirm('Are you want to confirm ?')) {
+    if(window.confirm('Are you sure? Do you want to confirm the booking?')) {
       this.storage.set(CONFIRM_HOTEL_KEY, this.props.hotel);
       this.storage.set(CONFIRM_ROOM_KEY, room);
       this.props.history.push(`/confirmation/${this.props.hotel.id}/${room.id}`);
