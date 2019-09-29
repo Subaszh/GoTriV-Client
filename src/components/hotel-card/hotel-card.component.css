@@ -1,0 +1,104 @@
+.landing-hotel-card {
+  min-height: 250px;
+  padding: 25px;
+  box-sizing: border-box;
+  border-bottom: 1.3px solid #f0f0f0;
+}
+
+.hotel-image-container {
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 100%;
+}
+
+.hotel-detail-container {
+  width: calc(100% - 200px);
+  padding: 0 25px;
+  float: left;
+  box-sizing: border-box;
+}
+
+.hotel-detail-container .left, .hotel-detail-container .right {
+  float: left;
+}
+
+.hotel-detail-container .left {
+  width: 70%
+}
+
+.hotel-detail-container .right {
+  width: 30%;
+}
+
+.hotel-name {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.landing-hotel-card:hover .hotel-name {
+  color: #2874f0;
+}
+
+.hotel-rating-container {
+  margin: 4px 0;
+}
+
+.rating-holder {
+  background: #388e3c;
+  border-radius: 3px;
+  font-weight: 600;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+}
+
+.fa-star {
+  font-size: 10px;
+  position: relative;
+  top: -1px;
+}
+
+.hotel-city-desc {
+  display: inline-block;
+  padding: 0 8px;
+  color: #878787;
+  font-weight: 600;
+}
+
+.hotel-desc-c {
+  padding: 6px 30px 0 0;
+  font-size: 14px;
+  color: #212121;
+}
+
+.hotel-category-detail {
+  font-size: 12px;
+  padding: 8px 0;
+  color: #212121;
+}
+
+.hotel-category-detail span {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.show-expand-container {
+  color: #2874f0;
+  padding: 12px 0;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: underline;
+}
+
+.action-button a {
+  color: white;
+  text-decoration: none;
+}

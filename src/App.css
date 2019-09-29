@@ -12,3 +12,17 @@ html, body, #root {
   background: #f1f3f6;
   height: calc(100% - 56px);
 }
+
+.action-button {
+  background: #2874f0;
+  height: 38px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 18px;
+  border-radius: 3.3px;
+}
+
+.action-button:focus, .action-button:active {
+  outline: 0;
+}

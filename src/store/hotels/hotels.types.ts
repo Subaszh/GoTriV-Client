@@ -8,7 +8,9 @@ export interface Hotel {
   country: string,
   price_category: string,
   rating: number,
-  distance_from_venue: number
+  distance_from_venue: number,
+  description: string,
+  images: string[]
 }
 
 export interface Hotels {

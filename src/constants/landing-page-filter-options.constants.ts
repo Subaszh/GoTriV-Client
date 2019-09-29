@@ -36,7 +36,7 @@ export const AMENITIES_FILTER = [
 export const PRICE_CATEGORY_FILTER = [
   {
     key: 'low',
-    label: 'low'
+    label: 'Low'
   },
   {
     key: 'medium',
