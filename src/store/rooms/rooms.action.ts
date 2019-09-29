@@ -5,10 +5,6 @@ const getRoomsByHotelId = (hotelId: string) => {
   return axios.get(`http://localhost:3000/rooms?hotel_id=${hotelId}`);
 }
 
-const getRoomsByRoomId = (roomId: string) => {
-  return axios.get(`http://localhost:3000/rooms/${roomId}`);
-}
-
 export const fetchRoomsByHotelId = (hotelId: string) => (dispatch: any, getState: any) => {
   const rooms = getState().rooms;
   if(rooms.length === 0 || rooms[0].hotel_id !== hotelId) {

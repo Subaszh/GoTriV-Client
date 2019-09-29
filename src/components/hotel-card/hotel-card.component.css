@@ -49,16 +49,6 @@
   margin: 4px 0;
 }
 
-.rating-holder {
-  background: #388e3c;
-  border-radius: 3px;
-  font-weight: 600;
-  display: inline-block;
-  color: white;
-  font-size: 12px;
-  padding: 3px 6px;
-}
-
 .fa-star {
   font-size: 10px;
   position: relative;
@@ -101,4 +91,8 @@
 .action-button a {
   color: white;
   text-decoration: none;
+}
+
+.hotel-distance-c {
+  font-size: 12px;
 }

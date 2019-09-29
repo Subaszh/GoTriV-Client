@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Hotel } from '../../store/hotels/hotels.types';
 import './hotel-card.component.css';
 import { Redirect, Link } from 'react-router-dom';
+import { RatingComponent } from '../rating/rating.component';
 
 interface HotelCardProps {
   hotel: Hotel
@@ -13,27 +14,31 @@ class HotelCard extends Component<HotelCardProps> {
   }
 
   render() {
+    const {hotel} = this.props
     return (
       <div className="landing-hotel-card">
         <div className="hotel-image-container">
-          <img className="hotel-image" src={this.props.hotel.images[0]} />
+          <img className="hotel-image" src={hotel.images[0]} />
         </div>
         <div className="hotel-detail-container">
           <div className="left">
-            <div className="hotel-name">{this.props.hotel.name}</div>
+            <div className="hotel-name">{hotel.name}</div>
             <div className="hotel-rating-container">
-              <div className="rating-holder">{this.props.hotel.rating} <i className="fa fa-star"></i></div>
-              <div className="hotel-city-desc">{this.props.hotel.city}, {this.props.hotel.country}</div>
+              <RatingComponent rating={hotel.rating}/>
+              <div className="hotel-city-desc">{hotel.city}, {hotel.country}</div>
+              <div className="hotel-distance-c">
+                <span><span className="bold">{hotel.distance_from_venue}m</span> from the venue</span>
+              </div>
             </div>
-            <div className="hotel-desc-c">{this.props.hotel.description}</div>
+            <div className="hotel-desc-c">{hotel.description}</div>
           </div>
           <div className="right">
             <button className="action-button">
-              <Link to={`/hotel-details/${this.props.hotel.id}`}>
+              <Link to={`/hotel-details/${hotel.id}`}>
                 View Details
               </Link>
               </button>
-            <div className="hotel-category-detail">Price Category: <span>{this.props.hotel.price_category}</span></div>
+            <div className="hotel-category-detail">Price Category: <span>{hotel.price_category}</span></div>
           </div>
         </div>
       </div>

@@ -1,0 +1,106 @@
+.hotel-details-c {
+  max-width: 1366px;
+  min-width: 1024px;
+  margin: 0 auto;
+  background: white;
+  height: 100%;
+  display: flex;
+  padding: 16px;
+}
+
+.left-c {
+  width: 40%;
+  position: sticky;
+}
+
+.right-c {
+  width: 60%;
+  padding: 0 25px;
+  height: 100%;
+  overflow: auto;
+}
+
+.img-p-c {
+  float: left;
+  border: 2px solid #f0f0f0;
+}
+
+.img-p-h {
+  width: 64px;
+  height: 64px;
+  border: 2px solid #f0f0f0;
+  border-right-width: 1px;
+  margin: 5px;
+}
+
+.img-p-h:hover {
+  border: 2px solid #2874f0;
+  border-right-width: 1px;
+}
+
+.act-img-c {
+  float: left;
+  width: calc(100% - 90px);
+  height: 420px;
+  border: 2px solid #f0f0f0;
+  border-left-width: 1px;
+}
+
+.act-img {
+  margin: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+}
+
+.hotel-name {
+  font: 18px/40px 500;
+}
+
+.hotel-amenities-c {
+  margin: 15px 0;
+}
+
+.amenities-h {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hotel-rooms-c {
+  padding: 20px 0;
+}
+
+
+.hotel-review-c {
+  border: 1.3px solid #f0f0f0;
+  margin-bottom: 25px;
+}
+
+.hotel-review-hd {
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0 10px;
+  border-bottom: 1.3px solid #f0f0f0;
+}
+
+.review-hd {
+  margin: 15px;
+  font-weight: 600
+}
+
+.review-bd {
+  padding: 10px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.hotel-review-ft {
+  line-height: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #999;
+  cursor: not-allowed;
+}
