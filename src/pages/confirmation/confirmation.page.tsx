@@ -55,12 +55,18 @@ export class ConfirmationPageComponent extends Component<any> {
   }
 
   invalidBookingConfirmation() {
-    return (<div className="invalid-message-c"></div>)
+    return (<div className="invalid-message-c">
+      <div className="book-more">
+        Invalid Booking Information. Please Contact Customer Care
+        <br/>
+        Click to continue <Link to="/">Search</Link> for rooms
+      </div>
+    </div>)
   }
 
   render() {
     const {hotel, room} = this.state;
-    if(!(hotel && hotel.id) || (!room && room.id)) {
+    if(!(hotel && hotel.id) || !(room && room.id)) {
       return this.invalidBookingConfirmation();
     } else {
       return (

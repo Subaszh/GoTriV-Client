@@ -13,6 +13,9 @@
 .invalid-message-c {
   max-height: 180px;
   border-radius: 2px;
+  height: 100%;
+  padding: 30px;
+  line-height: 30px;
 }
 
 .card-holder {
