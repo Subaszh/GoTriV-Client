@@ -1,3 +1,20 @@
+# GoTriV-Client
+
+To Run
+
+```sh
+$ npm install
+$ npm run start
+```
+Please pass the GoTriv server address in file environment.constants.ts
+
+Thank you!!!
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
