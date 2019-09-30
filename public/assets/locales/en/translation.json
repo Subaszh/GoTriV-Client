@@ -1,0 +1,32 @@
+{
+  "room": {
+    "people_per_room": "People/Room"
+  },
+  "hotel": {
+    "amenities": "Amenities",
+    "gym": "Gym",
+    "pool": "Pool",
+    "restuarant": "restuarant",
+    "spa": "Spa",
+    "ac": "AC",
+    "parking": "Parking",
+    "bar": "Bar",
+    "wifi": "Wi-fi"
+  },
+  "filters": {
+    "filters": "Filters",
+    "price_category": "Price Category",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "rating_high_to_low": "Rating - High to Low",
+    "rating_low_to_high": "Rating - Low to High",
+    "distance_high_to_low": "Distance - High to Low",
+    "distance_low_to_high": "Distance - Low to High"
+  },
+  "common": {
+    "view_details" : "View Details",
+    "from_the_venue": "from the venue",
+    "book_now": "Book Now"
+  }
+}

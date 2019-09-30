@@ -1,34 +1,34 @@
 export const AMENITIES_FILTER = [
   {
-    label: 'Gym',
+    label: 'hotel.gym',
     key: 'gym'
   },
   {
-    label: 'Pool',
+    label: 'hotel.pool',
     key: 'pool'
   },
   {
-    label: 'Wi-fi',
+    label: 'hotel.wifi',
     key: 'wifi'
   },
   {
-    label: 'Restuarant',
+    label: 'hotel.restuarant',
     key: 'restaturant'
   },
   {
-    label: 'Spa',
+    label: 'hotel.spa',
     key: 'spa'
   },
   {
-    label: 'AC',
+    label: 'hotel.ac',
     key: 'ac'
   },
   {
-    label: 'Parking',
+    label: 'hotel.parking',
     key: 'parking'
   },
   {
-    label: 'Bar',
+    label: 'hotel.bar',
     key: 'bar'
   }
 ]
@@ -36,36 +36,36 @@ export const AMENITIES_FILTER = [
 export const PRICE_CATEGORY_FILTER = [
   {
     key: 'low',
-    label: 'Low'
+    label: 'filters.low'
   },
   {
     key: 'medium',
-    label: 'Medium'
+    label: 'filters.medium'
   },
   {
     key: 'high',
-    label: 'High'
+    label: 'filters.high'
   }
 ]
 
 export const LANDING_SORT_FILTER = [
   {
-    label: "Rating - High to Low",
+    label: "filters.rating_high_to_low",
     key: "rating",
     order: 'desc'
   },
   {
-    label: "Rating - Low to High",
+    label: "filters.rating_low_to_high",
     key: "rating",
     order: 'asc'
   },
   {
-    label: "Distance - Low to High",
+    label: "filters.distance_low_to_high",
     key: "distance_from_venue",
     order: 'asc'
   },
   {
-    label: "Distance - High to Low",
+    label: "filters.distance_high_to_low",
     key: "distance_from_venue",
     order: 'desc'
   }

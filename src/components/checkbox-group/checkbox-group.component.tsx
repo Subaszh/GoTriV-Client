@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './checkbox-group.component.css';
+import { withTranslation, WithTranslation } from 'react-i18next';
 
 interface CheckBoxGroupComponentProps {
   options: CheckBoxInputOption[],
@@ -11,7 +12,7 @@ interface CheckBoxInputOption {
   label: string
 }
 
-class CheckBoxGroupComponent extends Component<CheckBoxGroupComponentProps> {
+class CheckBoxGroupComponent extends Component<CheckBoxGroupComponentProps & WithTranslation> {
   checked: string[] = [];
 
   parseSelections(value: string) {
@@ -29,6 +30,7 @@ class CheckBoxGroupComponent extends Component<CheckBoxGroupComponentProps> {
   }
 
   render() {
+    const {t} = this.props;
     return this.props.options.map(option => {
      return (
       <div className="checkbox-group-holder" key={'chkbx-grp-' + option.key}>
@@ -42,7 +44,7 @@ class CheckBoxGroupComponent extends Component<CheckBoxGroupComponentProps> {
        </div>
        <div className="checkbox-group-label">
          <label htmlFor={'chkbx-grp-' + option.key}>
-          {option.label}
+          {t(option.label)}
         </label>
         </div>
       </div>
@@ -50,4 +52,4 @@ class CheckBoxGroupComponent extends Component<CheckBoxGroupComponentProps> {
   };
 }
 
-export default CheckBoxGroupComponent;
+export default withTranslation()(CheckBoxGroupComponent);

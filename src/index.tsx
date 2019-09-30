@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
@@ -7,6 +7,7 @@ import logger from 'redux-logger';
 import { rootReducer } from './store/index';
 import './index.css';
 import App from './App';
+import './i18n';
 // import * as serviceWorker from './serviceWorker';
 
 const middleware: any = [ thunk ];
@@ -18,8 +19,10 @@ const store = createStore(rootReducer, applyMiddleware(...middleware));
 
 ReactDOM.render(
     <Provider store={store}>
-      <App>
-      </App> 
+      <Suspense fallback="loading">
+        <App>
+        </App> 
+      </Suspense>
     </Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
